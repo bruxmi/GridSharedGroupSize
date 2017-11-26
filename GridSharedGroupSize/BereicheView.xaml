@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="GridSharedGroupSize.BereicheView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GridSharedGroupSize"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <Grid x:Name="BereicheView1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition SharedSizeGroup="A"/>
+            <!--<ColumnDefinition Width="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Grid}, AncestorLevel=2}, Path=ColumnDefinitions[0].Width}" />-->
+            <ColumnDefinition SharedSizeGroup="B"/>
+            <ColumnDefinition SharedSizeGroup="C"/>
+            <ColumnDefinition SharedSizeGroup="D"/>
+            <ColumnDefinition Width="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Grid}, AncestorLevel=2}, Path=ColumnDefinitions[4].Width}" />
+        </Grid.ColumnDefinitions>
+        <Border Background="White" Grid.Column="0" BorderBrush="Gray" BorderThickness="0,0,1,0" Padding="5">
+            <TextBlock Text="{Binding Name}"/>
+        </Border>
+        <Border Background="LightBlue" Grid.Column="1" BorderBrush="Gray" BorderThickness="0,0,1,0" Padding="5">
+            <TextBlock Text="{Binding City}"/>
+        </Border>
+        <Border Background="White" Grid.Column="2" BorderBrush="Gray" BorderThickness="0,0,1,0" Padding="5">
+            <TextBlock Text="{Binding BeginDate}"/>
+        </Border>
+        <Border Background="LightBlue" Grid.Column="3" BorderBrush="Gray" BorderThickness="0,0,1,0" Padding="5">
+            <TextBlock Text="{Binding EndDate}"/>
+        </Border>
+        <Border Background="White" Grid.Column="4" BorderBrush="Gray" BorderThickness="0,0,1,0" Padding="5">
+            <TextBlock Text="{Binding Department}"/>
+        </Border>
+    </Grid>
+</UserControl>
