@@ -11,7 +11,7 @@ namespace GridSharedGroupSize
         public BereichViewModel1()
         {
             this.Title = "BereichViewModel1 BereichViewModel1";
-            this.City = "Berlin";
+            this.City = "Franfurt am Main weil es so lang";
             this.Name = "BereichViewModel1";
             this.Department = "BereichViewModel1 Department";
             this.BeginDate = DateTime.Now;

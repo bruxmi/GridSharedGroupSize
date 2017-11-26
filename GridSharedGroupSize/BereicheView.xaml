@@ -14,22 +14,29 @@
             <ColumnDefinition SharedSizeGroup="B"/>
             <ColumnDefinition SharedSizeGroup="C"/>
             <ColumnDefinition SharedSizeGroup="D"/>
-            <ColumnDefinition Width="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Grid}, AncestorLevel=2}, Path=ColumnDefinitions[4].Width}" />
+            <ColumnDefinition Width="Auto" SharedSizeGroup="E"/>
+            <ColumnDefinition Width="Auto" SharedSizeGroup="F"/>
+            <ColumnDefinition Width="Auto" SharedSizeGroup="G"/>
+            <ColumnDefinition Width="Auto" SharedSizeGroup="H"/>
+            <ColumnDefinition Width="Auto" SharedSizeGroup="I"/>
+            <ColumnDefinition Width="Auto" SharedSizeGroup="J"/>
+            <!--<ColumnDefinition Width="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Grid}, AncestorLevel=2}, Path=ColumnDefinitions[4].Width}" />-->
         </Grid.ColumnDefinitions>
-        <Border Background="White" Grid.Column="0" BorderBrush="Gray" BorderThickness="0,0,1,0" Padding="5">
-            <TextBlock Text="{Binding Name}"/>
-        </Border>
-        <Border Background="LightBlue" Grid.Column="1" BorderBrush="Gray" BorderThickness="0,0,1,0" Padding="5">
-            <TextBlock Text="{Binding City}"/>
-        </Border>
-        <Border Background="White" Grid.Column="2" BorderBrush="Gray" BorderThickness="0,0,1,0" Padding="5">
-            <TextBlock Text="{Binding BeginDate}"/>
-        </Border>
-        <Border Background="LightBlue" Grid.Column="3" BorderBrush="Gray" BorderThickness="0,0,1,0" Padding="5">
-            <TextBlock Text="{Binding EndDate}"/>
-        </Border>
-        <Border Background="White" Grid.Column="4" BorderBrush="Gray" BorderThickness="0,0,1,0" Padding="5">
-            <TextBlock Text="{Binding Department}"/>
-        </Border>
+
+        <Label Content="Name: " Grid.Column="0" Background="White"/>
+        <TextBlock Text="{Binding Name}" Grid.Column="1" Background="LightBlue" Padding="5"/>
+
+        <Label Content="Stadt: " Grid.Column="2" Background="White"/>
+        <TextBlock Text="{Binding City}" Grid.Column="3" Background="LightBlue" Padding="5"/>
+
+        <Label Content="Startdatum: " Grid.Column="4" Background="White"/>
+        <TextBlock Text="{Binding BeginDate}" Grid.Column="5" Background="LightBlue" Padding="5"/>
+
+
+        <Label Content="Enddatum: " Grid.Column="6" Background="White"/>
+        <TextBlock Text="{Binding EndDate}" Grid.Column="7" Background="LightBlue" Padding="5"/>
+
+        <Label Content="Dapartment: " Grid.Column="8" Background="White"/>
+        <TextBlock Text="{Binding Department}" Grid.Column="9" Background="LightBlue" Padding="5"/>
     </Grid>
 </UserControl>

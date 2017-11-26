@@ -20,25 +20,36 @@
             </Grid.Resources>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" SharedSizeGroup="A"/>
-                <ColumnDefinition Width="Auto" SharedSizeGroup="B"/>
+                <ColumnDefinition Width="*" SharedSizeGroup="B"/>
                 <ColumnDefinition Width="Auto" SharedSizeGroup="C"/>
-                <ColumnDefinition Width="Auto" SharedSizeGroup="D"/>
+                <ColumnDefinition Width="*" SharedSizeGroup="D"/>
                 <ColumnDefinition Width="Auto" SharedSizeGroup="E"/>
-                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*" SharedSizeGroup="F"/>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="G"/>
+                <ColumnDefinition Width="*" SharedSizeGroup="H"/>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="I"/>
+                <ColumnDefinition Width="*" SharedSizeGroup="J"/>
+                <ColumnDefinition Width="1"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
-            <ScrollViewer Grid.ColumnSpan="6">
+            <ScrollViewer Grid.ColumnSpan="11" VerticalScrollBarVisibility="Hidden">
                 <ItemsControl ItemsSource="{Binding Bereiche}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <ContentControl Content="{Binding}"/>
+                            <ContentControl Content="{Binding}" Margin="5"/>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </ScrollViewer>
+            
+            
+            <!--<StackPanel Orientation="Vertical">
+                <local:BereicheView DataContext="{Binding Bereich1}"/>
+                <local:BereicheView2 DataContext="{Binding Bereich2}"/>
+            </StackPanel>-->
         </Grid>
     </Border>
 </Window>

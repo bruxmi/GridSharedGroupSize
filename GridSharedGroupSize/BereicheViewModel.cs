@@ -16,6 +16,26 @@ namespace GridSharedGroupSize
             this.Bereiche.Add(new BereichViewModel2());
             this.Bereiche.Add(new BereichViewModel1());
             this.Bereiche.Add(new BereichViewModel2());
+
+            this.Bereiche.Add(new BereichViewModel1());
+            this.Bereiche.Add(new BereichViewModel2());
+            this.Bereiche.Add(new BereichViewModel1());
+            this.Bereiche.Add(new BereichViewModel2());
+
+            this.Bereich1 = new BereichViewModel1();
+            this.Bereich2 = new BereichViewModel2();
+        }
+
+        public BereichViewModel1 Bereich1
+        {
+            get { return GetValue<BereichViewModel1>(); }
+            set { SetValue(value); }
+        }
+
+        public BereichViewModel2 Bereich2
+        {
+            get { return GetValue<BereichViewModel2>(); }
+            set { SetValue(value); }
         }
 
         public ObservableCollection<IBereich> Bereiche
